@@ -7,11 +7,23 @@ import Valesokkelista from './pages/js/Valesokkelista';
 import Verkkokauppa from './pages/js/Verkkokauppa';
 import Yhteydenotto from './pages/js/Yhteydenotto';
 import Ostoskori from './pages/js/Cart';
-import { Routes, Route } from 'react-router-dom';
+import Footer from './Footer';
 import NavBar from './NavBar';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import {useEffect} from 'react';
 
 
 function App() {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="App">
       <NavBar />
@@ -26,6 +38,8 @@ function App() {
         <Route path="/yhteydenotto" element={<Yhteydenotto />} />
         <Route path="/ostoskori" element={<Ostoskori />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }

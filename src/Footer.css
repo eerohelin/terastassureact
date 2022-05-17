@@ -1,0 +1,21 @@
+/* FOOTER */
+
+footer {
+    position: relative;
+    color: var(--light-white);
+    background-color: var(--dark-green);
+    height: 300px;
+    box-shadow: 0 -1px 7px rgba(0, 0, 0, .4);
+}
+
+#footer {
+    position: absolute;
+    top: 15px;
+    margin-left: 2%;
+}
+
+#maksutavat {
+    margin-top: 10px;
+    width: auto;
+    height: 100px;
+}
