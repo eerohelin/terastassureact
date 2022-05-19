@@ -48,7 +48,7 @@ nav {
 .link::after {
     display: block;
     content: "";
-    width: 0px;
+    width: var(--underline-width);
     height: 0px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.9);
     margin: 0 auto;
@@ -57,10 +57,6 @@ nav {
 
 .link:hover::after {
     width:100%;
-}
-
-.link:active {
-    color: rgb(200, 200, 200);
 }
 
 .showNav {
@@ -77,6 +73,12 @@ nav {
     color: black;
     justify-content: center;
     align-items: center;
+
+}
+
+#title-container {
+    position: relative;
+    z-index: 10;
     box-shadow: 0 .5px 10px rgba(0, 0, 0, .2);
 }
 
@@ -99,6 +101,51 @@ nav {
     height:30px;
     margin-left: 10px;
 }
+
+@keyframes cartShake {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: ease-out;
+    }
+    25% {
+        transform: rotate(5deg);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: rotate(0);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: rotate(-5deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: rotate(0);
+        animation-timing-function: ease-in;
+    }
+}
+
+#cartText::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 0px;
+    border-bottom: 2px solid var(--light-green);
+    margin: 0 auto;
+    margin-top: -1px;
+    transition: all 0.2s;
+}
+
+#cart-wrapper:hover #cartText::after {
+    width: 100%;
+}
+
+#cart-wrapper:hover #cartIcon {
+    animation-name: cartShake;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
 
 #cart {
     height:30px;

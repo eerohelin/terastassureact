@@ -1,0 +1,138 @@
+/* TITLE SECTION */
+
+#vk-title-wrapper {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#vk-title-section {
+    width: 90%;
+}
+
+#vk-title-text {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 15px;
+    max-width: 40%;
+    color: var(--light-white);
+    background-color: var(--light-green);
+    box-shadow: 0 0 5px black;
+}
+
+#vk-title-text > h1 {
+    font-size: 45px;
+}
+
+/* SHOP SECTION */
+
+#vk-shop-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#vk-shop-wrapper {
+    width: 87%;
+    position: relative;
+}
+
+#vk-shop-title {
+    background-color: blue;
+}
+
+
+#vk-shop {
+    display: flex;
+    flex-direction: column;
+}
+
+#vk-product-list {
+    height: 800px;
+    width: 57%;
+    overflow: auto;
+    position: absolute;
+    left:0;
+}
+
+/* FILTER SECTION */
+
+#vk-product-filter-wrapper {
+    height: 790px;
+    width: 42%;
+    margin-top: 10px;
+    background-color: var(--light-green);
+    position: absolute;
+    right:0;
+}
+
+#vk-filter-title-wrapper {
+    display: flex;
+    justify-content: center;
+    color: var(--light-white)
+}
+
+
+/* PRODUCT */
+.vk-product-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-green);
+    height: 220px;
+    width: 900px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.vk-product-wrapper > img {
+    height:195px;
+    width: 78px;
+    padding: 5px;
+    margin-top: 7px;
+    background-color: var(--light-white);
+}
+
+.vk-product-info-section {
+    width:100%;
+    margin-left: 15px;
+    position: relative;
+}
+
+.vk-productName {
+    padding-right: 50px;
+    margin-top: 6px;
+    color:var(--light-white)
+}
+
+.vk-add-to-cart-wrapper {
+    position: absolute;
+    bottom:6px;;
+    right:0;
+    display: flex;
+}
+
+.vk-price {
+    color: var(--light-white);
+}
+
+.vk-product-description {
+    width: 98.8%;
+    height: 50%;
+    margin-top: 6px;;
+    padding: 5px;
+    background-color: var(--light-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+.vk-add-to-cart-wrapper > button {
+    background-color: var(--light-white);
+    color: var(--light-green);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}

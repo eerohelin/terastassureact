@@ -9,8 +9,22 @@ import Yhteydenotto from './pages/js/Yhteydenotto';
 import Ostoskori from './pages/js/Cart';
 import Footer from './Footer';
 import NavBar from './NavBar';
+import { PageSelect } from './NavBar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import {useEffect} from 'react';
+
+function checkPage(pages, link) {
+  for (let item of pages) {
+    item.style.color = "#cccccc";
+    item.style.setProperty("--underline-width", "0%")
+  }
+  for (let item of pages) {
+    if (item.getAttribute("href") == link["pathname"]) {
+      item.style.color = "#eeeeee"
+      item.style.setProperty("--underline-width", "100%")
+    }
+  }
+}
 
 
 function App() {
@@ -22,6 +36,8 @@ function App() {
   
   useEffect(() => {
     window.scrollTo(0, 0);
+    let pages = PageSelect()
+    checkPage(pages, location)
   }, [location]);
 
   return (

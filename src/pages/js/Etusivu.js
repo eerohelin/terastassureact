@@ -1,35 +1,40 @@
 import React from "react";
-import '../css/Etusivu.css'
+import '../css/Etusivu.css';
+import '../css/HeaderPadding.css';
 import { Link } from "react-router-dom";
  
 
 function listener() {
     let offset = window.pageYOffset;
-    const parallax = document.getElementById("parallax1")
-    parallax.style.backgroundPositionY = offset * 0.6 + "px";
+    const parallax1 = document.getElementById("parallax1")
+    const parallax2 = document.getElementById("video-player-section")
+    parallax1.style.backgroundPositionY = offset * 0.7 + "px";
+    parallax2.style.backgroundPositionY = offset * 0.6 + "px";
 }
 
 class Etusivu extends React.Component {
 
     componentDidMount() {
         window.addEventListener("scroll", listener)
-        console.log("Mounted")
+        // console.log("Mounted")
     }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", listener)
-        console.log("Dismounted")
+        // console.log("Dismounted")
     }
 
     render() {
         return(
             <div id="page">
+
                 <div id="parallax1">
                     <h3 id="title-wrapper">
                         <p>Terästassu Oy</p>
                         <p id="title-description">Tehokas ratkaisu valesokkelin korjaukseen</p>
                     </h3>
                 </div>
+
                 <div id="description-wrapper">
                     <div id="description-section-wrapper">
 
@@ -77,15 +82,17 @@ class Etusivu extends React.Component {
                         </p>
                     </div>
                 </div>
+
                 <div id="video-player-section">
                     <div id="video-player-wrapper">
                         <div id="video-player-container">
-                            <iframe id="video-player"
+                            <iframe id="video-player" title="video-player"
                             src="https://www.youtube.com/embed/v5u6y-AYd_o">
                             </iframe>
                         </div>
                     </div>
                  </div>
+
             </div>
         )
     }
