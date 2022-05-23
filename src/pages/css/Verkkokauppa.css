@@ -1,58 +1,77 @@
 /* TITLE SECTION */
 
 #vk-title-wrapper {
-    height: 30vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
-
+    background-image: url(/src/imgs/terastassu-banner1.jpg);
+    background-size: cover;
 }
 
 #vk-title-section {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #vk-title-text {
-    margin-top: 50px;
     display: inline-block;
-    padding: 15px;
-    max-width: 40%;
-    color: var(--light-white);
-    background-color: var(--light-green);
-    box-shadow: 0 0 5px black;
+    text-align: center;
+    /* height: 120px; */
+    width: 90%;
+    color: black;
+    backdrop-filter: blur(2px);
+    padding: 8px 24px;
+    border-radius:16px;
+    background: rgb(238, 238, 238, .7);
 }
 
+
 #vk-title-text > h1 {
-    font-size: 45px;
+    font-size: 60px;
+}
+#vk-title-text > h3 {
+    font-size: 24px;
 }
 
 /* SHOP SECTION */
 
 #vk-shop-container {
-    height: 100vh;
+    height: 93vh;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 #vk-shop-wrapper {
-    width: 87%;
+    width: 90%;
     position: relative;
 }
 
+#vk-shop-title-wrapper {
+    position: relative;
+}
+
+
 #vk-shop-title {
-    background-color: blue;
+    background-color: var(--dark-green);
+    color: var(--light-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    padding: 10px;
 }
 
 
 #vk-shop {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 #vk-product-list {
-    height: 800px;
-    width: 57%;
+    height: 755px;
+    width: 64%;
     overflow: auto;
     position: absolute;
     left:0;
@@ -61,18 +80,69 @@
 /* FILTER SECTION */
 
 #vk-product-filter-wrapper {
-    height: 790px;
-    width: 42%;
+    height: 240px;
+    width: 42.5%;
     margin-top: 10px;
-    background-color: var(--light-green);
     position: absolute;
     right:0;
+    display: flex;
+    justify-content: center;
+}
+
+#vk-product-filter-container {
+    width: 60%;
+    height: 240px;
+    background-color: var(--dark-green);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 #vk-filter-title-wrapper {
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     color: var(--light-white)
+}
+
+#vk-filter-body-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#vk-filter-filters {
+    width:70%;
+    color: var(--dark-green);
+}
+
+#react-select-3-placeholder {
+    color: var(--dark-green);
+}
+#react-select-5-placeholder {
+    color: var(--dark-green);
+}
+
+#vk-filter-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#vk-filter-footer > button {
+    width: 70%;
+    height: 30px;
+    border: none;
+    background-color: var(--light-white);
+    color: var(--dark-green);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+}
+
+#vk-filter-footer > button:hover {
+    background-color: #dfdfdf;
+}
+
+#vk-filter-footer > button:active {
+    background-color: #cfcfcf;
 }
 
 
@@ -80,25 +150,32 @@
 .vk-product-wrapper {
     display: flex;
     flex-direction: row;
-    background-color: var(--light-green);
-    height: 220px;
-    width: 900px;
+    background-color: var(--dark-green);
+    height: 253px;
+    width: 1035px;
     padding: 10px;
     margin-top: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .vk-product-wrapper > img {
-    height:195px;
-    width: 78px;
+    height: 224px;
+    width: 90px;
     padding: 5px;
     margin-top: 7px;
     background-color: var(--light-white);
 }
 
+.vk-product-info-wrapper {
+    position: absolute;
+    width: 85.5%;
+    height: 35.48%;
+    left: 120px;
+}
+
 .vk-product-info-section {
-    width:100%;
-    margin-left: 15px;
+    width: 922px;
+    height: 100%;
     position: relative;
 }
 
@@ -108,15 +185,17 @@
     color:var(--light-white)
 }
 
-.vk-add-to-cart-wrapper {
-    position: absolute;
-    bottom:6px;;
-    right:0;
-    display: flex;
-}
 
 .vk-price {
     color: var(--light-white);
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.vk-productIncludes {
+    color: var(--light-white);
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .vk-product-description {
@@ -128,9 +207,21 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
 
+.vk-product-delivery-time {
+    color: var(--light-white);
+    margin-top: 12px;
+}
+
+.vk-add-to-cart-wrapper {
+    position: absolute;
+    bottom:25px;
+    right:0;
+    display: flex;
+}
+
 .vk-add-to-cart-wrapper > button {
     background-color: var(--light-white);
-    color: var(--light-green);
+    color: var(--dark-green);
     padding: 5px;
     border: none;
     cursor: pointer;

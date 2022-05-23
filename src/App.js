@@ -9,30 +9,52 @@ import Yhteydenotto from './pages/js/Yhteydenotto';
 import Ostoskori from './pages/js/Cart';
 import Footer from './Footer';
 import NavBar from './NavBar';
+import Title from './Title';
 import { PageSelect } from './NavBar';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import {useEffect} from 'react';
-
-function checkPage(pages, link) {
-  for (let item of pages) {
-    item.style.color = "#cccccc";
-    item.style.setProperty("--underline-width", "0%")
-  }
-  for (let item of pages) {
-    if (item.getAttribute("href") == link["pathname"]) {
-      item.style.color = "#eeeeee"
-      item.style.setProperty("--underline-width", "100%")
-    }
-  }
-}
+import {useEffect, useState} from 'react';
 
 
 function App() {
+
+  function checkPage(pages, link) {
+    for (let item of pages) {
+      item.style.color = "#cccccc";
+      item.style.setProperty("--underline-width", "0%")
+    }
+    for (let item of pages) {
+      if (item.getAttribute("href") === link["pathname"]) {
+
+        var pathname = link["pathname"]
+        if (pathname === "/") {
+          setTitle("Terästassu Oy")
+        } else if (pathname.includes("verkkokauppa")) {
+          setTitle("Verkkokauppa")
+        } else if (pathname.includes("valesokkelista")) {
+          setTitle("Valesokkelista Yleisesti")
+        } else if (pathname.includes("suunnittelijoille")) {
+          setTitle("Suunnittelijoille")
+        } else if (pathname.includes("asennusohjeet")) {
+          setTitle("Asennusohjeet")
+        } else if (pathname.includes("terastassunedut")) {
+          setTitle("Terästassun Edut")
+        } else if (pathname.includes("yhteydenotto")) {
+          setTitle("Yhteydenotto")
+        }
+
+        item.style.color = "#eeeeee"
+        item.style.setProperty("--underline-width", "100%")
+      }
+    }
+  }
+
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
 
   const location = useLocation();
+  const [title, setTitle] = useState(location["pathname"])
+  const [description, setDescription] = useState(null)
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,6 +65,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+
+      <Title text={title} description={description}/>
 
       <Routes>
         <Route path="/" element={<Etusivu />} />

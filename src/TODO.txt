@@ -1,0 +1,8 @@
+TODO-List of Terastassu REACT
+
+✅
+
+- Implement functionality of "Lisää Ostoskoriin" buttons on products
+- Implement "Ostoskori"
+- Save "Ostoskori" in chrome
+- Style "Verkkokauppa"

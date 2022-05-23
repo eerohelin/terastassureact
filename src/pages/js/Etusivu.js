@@ -4,36 +4,27 @@ import '../css/HeaderPadding.css';
 import { Link } from "react-router-dom";
  
 
-function listener() {
+function listener1() {
     let offset = window.pageYOffset;
-    const parallax1 = document.getElementById("parallax1")
     const parallax2 = document.getElementById("video-player-section")
-    parallax1.style.backgroundPositionY = offset * 0.7 + "px";
     parallax2.style.backgroundPositionY = offset * 0.6 + "px";
 }
 
 class Etusivu extends React.Component {
 
     componentDidMount() {
-        window.addEventListener("scroll", listener)
+        window.addEventListener("scroll", listener1)
         // console.log("Mounted")
     }
 
     componentWillUnmount() {
-        window.removeEventListener("scroll", listener)
+        window.removeEventListener("scroll", listener1)
         // console.log("Dismounted")
     }
 
     render() {
         return(
             <div id="page">
-
-                <div id="parallax1">
-                    <h3 id="title-wrapper">
-                        <p>Terästassu Oy</p>
-                        <p id="title-description">Tehokas ratkaisu valesokkelin korjaukseen</p>
-                    </h3>
-                </div>
 
                 <div id="description-wrapper">
                     <div id="description-section-wrapper">
