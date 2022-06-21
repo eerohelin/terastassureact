@@ -8,10 +8,6 @@ function listener() {
 }
 
 class Title extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
 
     componentDidMount() {
         window.addEventListener("scroll", listener)

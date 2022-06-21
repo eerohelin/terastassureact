@@ -31,7 +31,6 @@
 .description-image-link {
     position: relative;
     margin-top: 25px;
-    background-color: red;
     display:inline-block;
     box-shadow: 0 0 7px rgba(0, 0, 0, .4);
     width: 90%;

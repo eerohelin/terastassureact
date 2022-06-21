@@ -1,44 +1,7 @@
-/* TITLE SECTION */
-
-#vk-title-wrapper {
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-image: url(/src/imgs/terastassu-banner1.jpg);
-    background-size: cover;
-}
-
-#vk-title-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#vk-title-text {
-    display: inline-block;
-    text-align: center;
-    /* height: 120px; */
-    width: 90%;
-    color: black;
-    backdrop-filter: blur(2px);
-    padding: 8px 24px;
-    border-radius:16px;
-    background: rgb(238, 238, 238, .7);
-}
-
-
-#vk-title-text > h1 {
-    font-size: 60px;
-}
-#vk-title-text > h3 {
-    font-size: 24px;
-}
-
 /* SHOP SECTION */
 
 #vk-shop-container {
+    margin-top: 30px;
     height: 93vh;
     width: 100%;
     display: flex;

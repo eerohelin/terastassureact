@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/Etusivu.css';
-import '../css/HeaderPadding.css';
 import { Link } from "react-router-dom";
  
 

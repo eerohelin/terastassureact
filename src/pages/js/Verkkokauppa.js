@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import '../css/HeaderPadding.css';
 import '../css/Verkkokauppa.css';
 import Select from 'react-select'
 
@@ -215,7 +214,7 @@ function Verkkokauppa() { // MAIN
                                         options={lengthOptions}
                                         isClearable="true"
                                         isSearchable="true"
-                                        placeholder="Pituus"
+                                        placeholder="Korkeus"
                                         onChange={handleChangeLength}
                                         value={selectValueLength}
                                         className="vk-filter-select"

@@ -17,7 +17,7 @@ import {useEffect, useState} from 'react';
 
 function App() {
 
-  function checkPage(pages, link) {
+  function checkPage(pages, link) { // Change NAV styling and TITLE & Description text
     for (let item of pages) {
       item.style.color = "#cccccc";
       item.style.setProperty("--underline-width", "0%")
@@ -28,18 +28,25 @@ function App() {
         var pathname = link["pathname"]
         if (pathname === "/") {
           setTitle("Terästassu Oy")
+          setDescription("Tehokas ratkaisu valesokkelin korjaukseen")
         } else if (pathname.includes("verkkokauppa")) {
           setTitle("Verkkokauppa")
+          setDescription("Mikäli mallistostamme ei löydy juuri sinun kohteeseesi sopivaa mallia, niin ratkaisemme kyllä ongelman (kysy sähköpostitse).")
         } else if (pathname.includes("valesokkelista")) {
           setTitle("Valesokkelista Yleisesti")
+          setDescription("")
         } else if (pathname.includes("suunnittelijoille")) {
           setTitle("Suunnittelijoille")
+          setDescription("")
         } else if (pathname.includes("asennusohjeet")) {
           setTitle("Asennusohjeet")
+          setDescription("")
         } else if (pathname.includes("terastassunedut")) {
           setTitle("Terästassun Edut")
+          setDescription("")
         } else if (pathname.includes("yhteydenotto")) {
           setTitle("Yhteydenotto")
+          setDescription("")
         }
 
         item.style.color = "#eeeeee"
