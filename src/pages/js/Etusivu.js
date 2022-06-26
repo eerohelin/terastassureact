@@ -29,29 +29,35 @@ class Etusivu extends React.Component {
                     <div id="description-section-wrapper">
 
                         <div className="description-section">
-                            <Link to="/verkkokauppa" className="description-image-link">
-                                <img src={require("../../imgs/verkkokauppa.png")} alt="" />
-                            </Link>
-                            <div className="description-section-text">
-                                <p><Link to="/">Verkkokaupassamme</Link> näet kaikki tuotteet hintoineen ja laajasta valikoimasta löydät tuotteet lähes jokaiseen valesokkeliin. Mikäli mallistostamme ei löydy juuri sinun kohteeseesi sopivaa mallia, niin ratkaisemme kyllä ongelman (kysy sähköpostitse).</p>
+                            <div className="description-section-wrapper">
+                                <Link to="/verkkokauppa" className="description-image-link">
+                                    <img src={require("../../imgs/verkkokauppa.png")} alt="" />
+                                </Link>
+                                <div className="description-section-text">
+                                    <p><Link to="/">Verkkokaupassamme</Link> näet kaikki tuotteet hintoineen ja laajasta valikoimasta löydät tuotteet lähes jokaiseen valesokkeliin. Mikäli mallistostamme ei löydy juuri sinun kohteeseesi sopivaa mallia, niin ratkaisemme kyllä ongelman (kysy sähköpostitse).</p>
+                                </div>
                             </div>
                         </div>
 
                         <div className="description-section">
-                            <Link to="/valesokkelista" className="description-image-link">
-                                <img src={require("../../imgs/valesokkelista.png")} alt="" />
-                            </Link>
-                            <div className="description-section-text">
-                                <p className="centered-text"><Link to="/">Valesokkelista Yleisesti</Link> - Täältä voit lukea valesokkelista, sen historiasta ja siihen liittyvistä terveyshaitoista.</p>
+                            <div className="description-section-wrapper">
+                                <Link to="/valesokkelista" className="description-image-link">
+                                    <img src={require("../../imgs/valesokkelista.png")} alt="" />
+                                </Link>
+                                <div className="description-section-text">
+                                    <p className="centered-text"><Link to="/">Valesokkelista Yleisesti</Link> - Täältä voit lukea valesokkelista, sen historiasta ja siihen liittyvistä terveyshaitoista.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div className="description-section">
-                            <Link to="/suunnittelijoille" className="description-image-link">
-                                <img src={require("../../imgs/suunnittelijoille1.png")} alt="" />
-                            </Link>
-                            <div className="description-section-text">
-                                <p className="centered-text"><Link to="/">Suunnittelijoille</Link> - Täältä saat ladattua Terästassun DWG malleja, puristus/nurjahdustestejä, ja muuta samanlaista.</p>
+                            <div className="description-section-wrapper">
+                                <Link to="/suunnittelijoille" className="description-image-link">
+                                    <img src={require("../../imgs/suunnittelijoille1.png")} alt="" />
+                                </Link>
+                                <div className="description-section-text">
+                                    <p className="centered-text"><Link to="/">Suunnittelijoille</Link> - Täältä saat ladattua Terästassun DWG malleja, puristus/nurjahdustestejä, ja muuta samanlaista.</p>
+                                </div>
                             </div>
                         </div>
 

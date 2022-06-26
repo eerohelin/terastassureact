@@ -10,7 +10,7 @@ import Ostoskori from './pages/js/Cart';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import Title from './Title';
-import { PageSelect } from './NavBar';
+import { PageSelect, ResizeListener } from './NavBar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import {useEffect, useState} from 'react';
 
@@ -68,6 +68,9 @@ function App() {
     let pages = PageSelect()
     checkPage(pages, location)
   }, [location]);
+
+
+  window.onresize = ResizeListener
 
   return (
     <div className="App">

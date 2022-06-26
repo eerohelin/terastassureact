@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 45.42vw;
     z-index: 1;
     width: 100%;
     background-image: url(/src/imgs/terastassu-banner1.jpg);
@@ -12,7 +12,7 @@
 }
 
 #title-wrapper {
-    font-size: 60px;
+    font-size: 3.13vw;
     background: rgb(238, 238, 238, .7);
     color: black;
     font-family: "Montserrat";
@@ -23,5 +23,5 @@
 }
 
 #title-description {
-    font-size: 24px;
+    font-size: 1.25vw;
 }

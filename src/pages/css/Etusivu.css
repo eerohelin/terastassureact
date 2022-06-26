@@ -1,8 +1,11 @@
 /* DESCRIPTION SECTION */
 
 #description-wrapper {
-    height: 73vh;
+    height: auto;
+    padding-bottom: 3%;
     background-color: var(--light-white);
+    display: flex;
+    flex-direction: column;
     position: relative;
     transition: height .2s;
     box-shadow: 0 1px 7px rgba(0, 0, 0, .4);
@@ -14,27 +17,32 @@
     display: flex;
     justify-content: center;
     gap: 2.5%;
-    height:494px;
+    height: auto;
 }
 
 .description-section {
-    margin-top: 50px;
+    margin-top: 2%;
     position: relative;
     width: 30%;
     display: flex;
     justify-content: center;
     background-color: var(--dark-green);
     box-shadow: 0 0 7px rgba(0, 0, 0, .7);
-    height: 90%;
+    height: fit-content;
+}
+
+.description-section-wrapper {
+    width: 90%;
+    height: 22vw;
 }
 
 .description-image-link {
     position: relative;
-    margin-top: 25px;
+    margin-top: 4.9%;
     display:inline-block;
     box-shadow: 0 0 7px rgba(0, 0, 0, .4);
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 63.3%;
 }
 
 .description-image-link > img {
@@ -43,34 +51,38 @@
 }
 
 .description-section-text {
-    position: absolute;
     background-color: var(--light-white);
     padding: 5px;
     box-shadow: 0 0 7px rgba(0, 0, 0, .4);
     color: black;
+    font-size: 0.8vw;
     text-align: center;
-    width: 503px;
-    height: 21%;
-    bottom: 9%;
+    width: auto;
+    height: 18.9%;
+    margin-top: 2%;
+}
+
+.description-section-text > p {
+    height: 99%;
+    width: 100%;
 }
 
 .centered-text {
-    position: absolute;
-    top: 25%;
+    margin-top: 15px;
 }
 
 /* DESCRIPTION TEXT SECTION */
 
 #description-info {
-    position: absolute;
-    left:4%;
-    top: 515px;
+    margin-left:2.5%;
+    margin-top: 1%;
     width: 94.8%;
+    height: auto;
+    font-size: 0.8vw;
 }
 
 #info-text {
-    max-width: 1100px;
-    line-height: 28px;
+    line-height: 1.45vw;
 }
 
 /* VIDEO PLAYER SECTION */
@@ -84,16 +96,16 @@
 }
 
 #video-player-container {
-    width: 800px;
+    width: 41.7vw;
 }
 
 #video-player {
-    min-width: 800px;
-    min-height: 450px;
+    min-width: 41.7vw;
+    min-height: 23.44vw;
 }
 
 #video-player-section {
-    height: 800px;
+    height: 41.7vw;
     background-image: url(../../imgs/terastassu-banner2.jpg);
     background-size:auto;
 }

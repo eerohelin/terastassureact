@@ -11,6 +11,19 @@ export const PageSelect = function PageSelector() {
     )
 }
 
+export const ResizeListener = function ResizeListener() {
+    const root = document.getElementById("root")
+
+    if (root !== null) {
+        var navWidth = Math.round(window.innerWidth * 0.027)
+        root.style.setProperty("--nav-height", navWidth + "px")
+        console.log(navWidth)
+    } else {
+        console.log("error")
+    }
+    
+}
+
 
 class NavBar extends React.Component {
     constructor() {
@@ -19,7 +32,6 @@ class NavBar extends React.Component {
             navBar: true
         }
     }
-    
 
     checkNav= () => {
         
