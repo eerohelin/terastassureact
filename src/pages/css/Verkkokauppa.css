@@ -44,7 +44,7 @@
 
 #vk-product-filter-wrapper {
     height: 240px;
-    width: 42.5%;
+    width: 30.5%;
     margin-top: 10px;
     position: absolute;
     right:0;
@@ -53,7 +53,7 @@
 }
 
 #vk-product-filter-container {
-    width: 60%;
+    width: 80%;
     height: 240px;
     background-color: var(--dark-green);
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
@@ -189,4 +189,8 @@
     border: none;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+.vk-add-to-cart-wrapper > button:hover {
+    background-color: rgb(221, 219, 219);
 }

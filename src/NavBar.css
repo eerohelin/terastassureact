@@ -113,6 +113,42 @@ nav {
     margin-left: 5px;
 }
 
+#cartNotifWrapper {
+    /* display: none; */
+    width: 200px;
+    height: 35px;
+    background-color: var(--dark-green);
+    position: absolute;
+    right: 0;
+    top: 45px;
+    padding: 3px;
+    transition: opacity .5s ease-out;
+    opacity: 0;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .3);
+}
+
+#cartNotifText {
+    color: var(--light-white);
+    font-size: 15px;
+    position: absolute;
+    bottom: 3px;
+}
+
+#cartNotifClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: var(--light-white);
+    width: 15px;
+    cursor: pointer;
+}
+
+#cartNotifClose:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+
 @keyframes cartShake {
     0% {
         transform: rotate(0);
@@ -147,11 +183,11 @@ nav {
     transition: all 0.2s;
 }
 
-#cart-wrapper:hover #cartText::after {
+#cart:hover #cartText::after {
     width: 100%;
 }
 
-#cart-wrapper:hover #cartIcon {
+#cart:hover #cartIcon {
     animation-name: cartShake;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;

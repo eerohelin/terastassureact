@@ -1,0 +1,222 @@
+
+
+#shopcart-wrapper {
+    height: auto;
+    min-height: 600px;
+}
+
+#shopcart-title-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#shopcart-title-wrapper {
+    position: relative;
+    width: 89.2vw;
+    height: 30px;
+}
+
+#shopcart-title {
+    background-color: var(--dark-green);
+    color: var(--light-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    font-size: 0.83vw;
+    padding: 10px;
+    width: 100%;
+}
+
+/* SHOPCART ITEMS */
+
+#shopcart-items-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-top: 50px;
+    width: 100%;
+    height: 26.1vw;
+    min-height: 60vh;
+}
+
+#shopcart-labels-container {
+    position: relative;
+    width: 80.2vw;
+    height: 2.61vw;
+    background-color: var(--dark-green);
+    color: var(--light-white);
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+#shopcart-label-product {
+    position: absolute;
+    left: 3vw;
+}
+
+#shopcart-label-price {
+    position: absolute;
+    right: 15.6vw;
+}
+
+#shopcart-label-amount {
+    position: absolute;
+    right: 8vw;
+}
+
+#shopcart-items {
+    width: 80.2vw;
+    min-height: 20.85vw;
+    height: 20.85vw;
+    min-height: 90%;
+    overflow: scroll;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8vw;
+}
+
+/* SHOPCART ITEM */
+
+.shopcart-item-wrapper {
+    background-color: var(--dark-green);
+    color: var(--light-white);
+    display: flex;
+    height: 50px;
+    width: 95%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.shopcart-item-title-container {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 2.09vw;
+    padding-left: 10px;
+}
+
+.shopcart-item-title {
+}
+
+#shopcart-item-price-container {
+    width: 50px;
+    margin-left: 51.8vw;
+}
+
+.shopcart-item-amount {
+    width: 3vw;
+    color: var(--dark-green);
+}
+
+#shopcart-item-amount-container {
+    margin-left: 4.42vw;
+}
+
+.shopcart-item-remove-button {
+    height: 1.57vw;
+    font-size: 0.7vw;
+    width: 3.15vw;
+    background-color: white;
+    color: var(--dark-green);
+    border: none;
+    cursor: pointer;
+}
+
+.shopcart-item-remove-button:hover {
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+#shopcart-item-remove-button-container {
+    margin-left: 1vw;
+}
+
+
+/* BOTTOM MENU */
+
+#shopcart-bottom-menu-wrapper {
+    height: 2.5vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#shopcart-bottom-menu-container {
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 89.2vw;
+}
+
+
+#shopcart-empty-cart-button {
+    font-size: .65vw;
+    position: absolute;
+    left: 1vw;
+    height: 2vw;
+    width: 4.3vw;
+    border: none;
+    background-color: white;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+#shopcart-empty-cart-button:hover {
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+#shopcart-total-price-alv {
+    color: var(--light-white);
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    font-size: .83vw;
+}
+#shopcart-total-price-noalv {
+    color: var(--light-white);
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    font-size: .83vw;
+}
+
+#shopcart-checkout-button {
+    position: absolute;
+    right: 0.5vw;
+    height: 2vw;
+    width: 4.3vw;
+    font-size: .65vw;
+    border: none;
+    background-color: white;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+#shopcart-checkout-button:hover {
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+#shopcart-continue-shopping-button {
+    position: absolute;
+    right: 6vw;
+    height: 2vw;
+    width: 4.3vw;
+    font-size: .65vw;
+    border: none;
+    background-color: white;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+#shopcart-continue-shopping-button:hover {
+    border: 1px solid rgba(0, 0, 0, .4);
+}

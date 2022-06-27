@@ -1,10 +1,11 @@
 import React, { useState} from "react";
+import { AddToCart} from './Cart';
 import '../css/Verkkokauppa.css';
 import Select from 'react-select'
 
-const products = {
+export const products = {
     tt125vakio : ["TT 125 Vakio", "30.70€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 2x4, 2x5 ja 2x6 runkoihin. "Haarukan" säätö välille 44mm - 52mm (kapeampiin runkoihin lisätään täytettä niin, että mitta vastaa paksuudeltaan edellämainittua). Materiaalina kuumasinkitty teräs (runko-osat M20).'],
-    tt125pieli : ["TT 125 pieli", "27.70€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 2x4, 2x5 ja 2x6 runkoihin. Asennus niin, että kahdella erikätisellä pielitassulla on kiinteä rakenneyhteys toisiinsa (kts. asennusohje). Materiaalina kuumasinkitty teräs (runko-osat M20).'],
+    tt125pieli : ["TT 125 Pieli", "27.70€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 2x4, 2x5 ja 2x6 runkoihin. Asennus niin, että kahdella erikätisellä pielitassulla on kiinteä rakenneyhteys toisiinsa (kts. asennusohje). Materiaalina kuumasinkitty teräs (runko-osat M20).'],
     tt125xl : ["TT 125 XL", "34.50€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 4x4 (90 mm - 105 mm) runkotolppiin. Soveltuu myös 5x5 (125mm) runkotolppiin, mikäli rungon alaosaa kavennetaan sivutukien korkeudelta vastaamaan 4x4 (100mm) runkomitoitusta. Materiaalina kuumasinkitty teräs (runko-osat M20).'],
     tt125xlpieli : ["TT 125 XL Pieli", "30.50€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 4x4 ja 5x5 runkoihin. Asennus niin, että kahdella erikätisellä pielitassulla on kiinteä rakenneyhteys toisiinsa (kts. asennusohje). Materiaalina kuumasinkitty teräs (runko-osat M20).'],
     tt125xlnurkka : ["TT 125 XL Nurkka", "34.50€", 'Asennusväli betonin ja puurungon väliin 125mm. Soveltuu käytettäväksi 4x4 (90 mm - 105 mm) nurkkatolppiin. Soveltuu myös 5x5 (125mm) nurkkatolppiin. Materiaalina kuumasinkitty teräs (runko-osat M20).', "Terästassu+kiinnitysruuvit."],
@@ -35,7 +36,7 @@ const products = {
     tt350xltupla : ["TT 350 XL Tupla", "79.00€", 'Asennusväli betonin ja puurungon väliin 350mm. Soveltuu käytettäväksi 4x4 (90 mm - 105 mm) runkotolppiin. Teräsosien leveys yhteensä 90mm. Soveltuu myös 5x5 (125mm) runkotolppiin, mikäli rungon alaosaa kavennetaan sivutukien korkeudelta vastaamaan 4x4 (100mm) runkomitoitusta. Materiaalina kuumasinkitty teräs (runko-osat M20).'],
 }
 
-const types = ["vakio", "pieli", "xl", "kynnys", "xlpieli", "xlnurkka", "xltupla"]
+const types = ["vakio", "pieli", "xl", "xlpieli", "xlnurkka", "xltupla"]
 const lengths = ["125", "150", "200", "225", "350"]
 
 var lengthOptions = [
@@ -49,7 +50,6 @@ var typeOptions = [
     {value : "vakio", label : "Vakio"},
     {value : "pieli", label : "Pieli"},
     {value : "xl", label : "XL"},
-    {value : "kynnys", label : "Kynnys"},
     {value : "xlpieli", label : "XL-Pieli"},
     {value : "xlnurkka", label : "XL-Nurkka"},
     {value : "xltupla", label : "XL-Tupla"}
@@ -100,7 +100,7 @@ function Product(props) { // PRODUCT CREATOR
                         Toimitusaika 1-4 arkipäivää.
                     </div>
                     <div className="vk-add-to-cart-wrapper">
-                        <button>
+                        <button onClick={() => AddToCart(props.path, props.name)}>
                             Lisää Ostoskoriin
                         </button>
                     </div>
@@ -223,7 +223,7 @@ function Verkkokauppa() { // MAIN
                                     </div>
                                 </div>
                                 <div id="vk-filter-footer">
-                                    <button onClick={function() {setValueLength(null); setValueType(null); filterProducts(null, null)}}>Tyhjennä</button>
+                                    <button onClick={function() {setValueLength(null); setValueType(null); filterProducts(null, null); localStorage.clear()}}>Tyhjennä</button>
                                 </div>
                             </div>
                         </div>

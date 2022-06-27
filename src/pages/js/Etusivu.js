@@ -12,7 +12,7 @@ function listener1() {
 class Etusivu extends React.Component {
 
     componentDidMount() {
-        window.addEventListener("scroll", listener1)
+        window.addEventListener("scroll", listener1, {passive: true})
         // console.log("Mounted")
     }
 

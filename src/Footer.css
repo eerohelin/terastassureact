@@ -4,8 +4,9 @@ footer {
     position: relative;
     color: var(--light-white);
     background-color: var(--dark-green);
-    height: 300px;
+    height: 15.65vw;
     box-shadow: 0 -1px 7px rgba(0, 0, 0, .4);
+    font-size: 0.8vw;
 }
 
 #footer {
@@ -17,5 +18,5 @@ footer {
 #maksutavat {
     margin-top: 10px;
     width: auto;
-    height: 100px;
+    height: 5.25vw;
 }

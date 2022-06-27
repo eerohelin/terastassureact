@@ -18,14 +18,24 @@ import {useEffect, useState} from 'react';
 function App() {
 
   function checkPage(pages, link) { // Change NAV styling and TITLE & Description text
+    const cart = document.getElementById("cart")
+    var pathname = link["pathname"]
+    if (cart.getAttribute("href") === cart["pathname"]) { // Ostoskori check
+      if (pathname.includes("ostoskori")) {
+        setTitle("Ostoskori")
+        setDescription("")
+      }
+    }
+
     for (let item of pages) {
       item.style.color = "#cccccc";
       item.style.setProperty("--underline-width", "0%")
     }
+
     for (let item of pages) {
       if (item.getAttribute("href") === link["pathname"]) {
 
-        var pathname = link["pathname"]
+       
         if (pathname === "/") {
           setTitle("Terästassu Oy")
           setDescription("Tehokas ratkaisu valesokkelin korjaukseen")
@@ -47,6 +57,9 @@ function App() {
         } else if (pathname.includes("yhteydenotto")) {
           setTitle("Yhteydenotto")
           setDescription("")
+        } else if (pathname.includes("ostoskori")) {
+          setTitle("Ostoskori")
+          setDescription("")
         }
 
         item.style.color = "#eeeeee"
@@ -57,6 +70,7 @@ function App() {
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
+    ResizeListener()
   }
 
   const location = useLocation();
@@ -67,6 +81,7 @@ function App() {
     window.scrollTo(0, 0);
     let pages = PageSelect()
     checkPage(pages, location)
+    document.getElementById("cartNotifWrapper").style.opacity = "0"
   }, [location]);
 
 
