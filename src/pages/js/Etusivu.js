@@ -1,25 +1,9 @@
 import React from "react";
 import '../css/Etusivu.css';
 import { Link } from "react-router-dom";
- 
-
-function listener1() {
-    let offset = window.pageYOffset;
-    const parallax2 = document.getElementById("video-player-section")
-    parallax2.style.backgroundPositionY = offset * 0.6 + "px";
-}
 
 class Etusivu extends React.Component {
 
-    componentDidMount() {
-        window.addEventListener("scroll", listener1, {passive: true})
-        // console.log("Mounted")
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("scroll", listener1)
-        // console.log("Dismounted")
-    }
 
     render() {
         return(

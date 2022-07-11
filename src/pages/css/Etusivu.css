@@ -107,5 +107,6 @@
 #video-player-section {
     height: 41.7vw;
     background-image: url(../../imgs/terastassu-banner2.jpg);
-    background-size:auto;
+    background-size: cover;
+    background-attachment: fixed;
 }
