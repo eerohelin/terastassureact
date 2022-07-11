@@ -2,7 +2,7 @@
 
 #vk-shop-container {
     margin-top: 30px;
-    height: 93vh;
+    height: 59vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,6 +25,10 @@
     padding: 10px;
 }
 
+#vk-shop-title > h1 {
+    font-size: 1.7vw;
+}
+
 
 #vk-shop {
     display: flex;
@@ -33,8 +37,9 @@
 }
 
 #vk-product-list {
-    height: 755px;
-    width: 64%;
+    height: 49.4vw; 
+    width: 57.5vw;
+    min-width:auto;
     overflow: auto;
     position: absolute;
     left:0;
@@ -43,8 +48,8 @@
 /* FILTER SECTION */
 
 #vk-product-filter-wrapper {
-    height: 240px;
-    width: 30.5%;
+    height: 12.5vw;
+    width: 27.2vw; /* 522 */
     margin-top: 10px;
     position: absolute;
     right:0;
@@ -54,16 +59,21 @@
 
 #vk-product-filter-container {
     width: 80%;
-    height: 240px;
+    height: 12.5vw;
     background-color: var(--dark-green);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0.2604vw rgba(0, 0, 0, .5);
 }
 
 #vk-filter-title-wrapper {
     margin-top: 5px;
     display: flex;
+    height: 2vw;
     justify-content: center;
     color: var(--light-white)
+}
+
+#vk-filter-title > h1 {
+    font-size: 1.65vw;
 }
 
 #vk-filter-body-wrapper {
@@ -73,8 +83,10 @@
 
 #vk-filter-filters {
     width:70%;
+    height: 6vw;
     color: var(--dark-green);
 }
+
 
 #react-select-3-placeholder {
     color: var(--dark-green);
@@ -86,16 +98,17 @@
 #vk-filter-footer {
     display: flex;
     justify-content: center;
+    height: 1.6vw;
 }
 
 #vk-filter-footer > button {
-    width: 70%;
-    height: 30px;
+    width: 15.2vw;
+    height: 1.6vw;
     border: none;
     background-color: var(--light-white);
     color: var(--dark-green);
     border-radius: 4px;
-    font-size: 16px;
+    font-size: .9vw;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
 }
@@ -114,32 +127,32 @@
     display: flex;
     flex-direction: row;
     background-color: var(--dark-green);
-    height: 253px;
-    width: 1035px;
-    padding: 10px;
-    margin-top: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    height: 12.5vw;
+    width: 96.3%;
+    padding: .521vw;
+    margin-bottom: .521vw;
+    box-shadow: 0 0 0.2604vw rgba(0, 0, 0, .5);
 }
 
 .vk-product-wrapper > img {
-    height: 224px;
-    width: 90px;
-    padding: 5px;
-    margin-top: 7px;
+    height: 11.67vw;
+    width: 4.7vw;
+    padding: 0.157vw;
+    margin-top: 0.365vw;
     background-color: var(--light-white);
 }
 
 .vk-product-info-wrapper {
-    position: absolute;
-    width: 85.5%;
-    height: 35.48%;
-    left: 120px;
+    width: 100%;
+    height: 14vw;
+    margin-left: .6vw;
 }
 
 .vk-product-info-section {
-    width: 922px;
-    height: 100%;
+    width: 100%;
+    height: 13vw;
     position: relative;
+    font-size: .83vw;
 }
 
 .vk-productName {
@@ -148,6 +161,9 @@
     color:var(--light-white)
 }
 
+.vk-productName > h3 {
+    font-size: 1vw;
+}
 
 .vk-price {
     color: var(--light-white);
@@ -163,21 +179,21 @@
 
 .vk-product-description {
     width: 98.8%;
-    height: 50%;
-    margin-top: 6px;;
-    padding: 5px;
+    height: 5.5vw;
+    margin-top: .32vw;
+    padding: .261vw;
     background-color: var(--light-white);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0.2604vw rgba(0, 0, 0, .3);
 }
 
 .vk-product-delivery-time {
     color: var(--light-white);
-    margin-top: 12px;
+    margin-top: .4vw;
 }
 
 .vk-add-to-cart-wrapper {
     position: absolute;
-    bottom:25px;
+    bottom: 1.2vw;
     right:0;
     display: flex;
 }
@@ -186,9 +202,13 @@
     background-color: var(--light-white);
     color: var(--dark-green);
     padding: 5px;
+    height: 1.4vw;
+    width: auto;
+    font-size: 0.7vw;
+    line-height: .3;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0.2604vw rgba(0, 0, 0, .3);
 }
 
 .vk-add-to-cart-wrapper > button:hover {

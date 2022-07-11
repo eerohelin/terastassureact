@@ -162,6 +162,46 @@ function Verkkokauppa() { // MAIN
 
     const [selectValueType, setValueType] = useState(null);
 
+    const customStyles = { // React Select Styling
+        control: (provided, state) => ({
+          ...provided,
+          minHeight: '2vw',
+          height: '2vw',
+          boxShadow: state.isFocused ? null : null,
+          marginBottom: '0.8vw'
+        }),
+    
+        valueContainer: (provided, state) => ({
+          ...provided,
+          height: '2vw',
+          padding: '0 6px',
+          fontSize: '.9vw'
+        }),
+    
+        input: (provided, state) => ({
+          ...provided,
+          margin: '0px',
+          color: '--dark-green'
+        }),
+        indicatorSeparator: state => ({
+          display: 'none',
+        }),
+        indicatorsContainer: (provided, state) => ({
+          ...provided,
+          height: '2vw',
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            color: '--dark-green',
+            height: '2vw',
+            fontSize: '.9vw'
+          }),
+        placeholder: (provided, state) => ({
+            ...provided,
+            color: '--dark-green',
+          }),
+      };
+
     const handleChangeType = (value) => {
         setValueType(value);
         filterProducts(value, selectValueLength)
@@ -208,8 +248,9 @@ function Verkkokauppa() { // MAIN
                                         onChange={handleChangeType}
                                         value={selectValueType}
                                         className="vk-filter-select"
+                                        styles={customStyles}
                                         />
-                                        <br />
+                                        
                                         <Select
                                         options={lengthOptions}
                                         isClearable="true"
@@ -218,8 +259,8 @@ function Verkkokauppa() { // MAIN
                                         onChange={handleChangeLength}
                                         value={selectValueLength}
                                         className="vk-filter-select"
+                                        styles={customStyles}
                                         />
-                                        <br />
                                     </div>
                                 </div>
                                 <div id="vk-filter-footer">

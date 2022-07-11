@@ -21,7 +21,7 @@ nav {
     align-items:center;
     background-color: var(--dark-green);
     backdrop-filter: blur(2px);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+    box-shadow: 0 0.0521vw 0.2604vw rgba(0, 0, 0, .4);
 }
 
 #nav-bar-links {
@@ -84,7 +84,7 @@ nav {
 #title-container {
     position: relative;
     z-index: 10;
-    box-shadow: 0 .5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0.026vw 0.5208vw rgba(0, 0, 0, .2);
 }
 
 /* Cart Section */
@@ -115,21 +115,21 @@ nav {
 
 #cartNotifWrapper {
     /* display: none; */
-    width: 200px;
-    height: 35px;
+    width: 10.42vw;
+    height: 1.83vw;
     background-color: var(--dark-green);
     position: absolute;
     right: 0;
-    top: 45px;
+    top: 2.4vw;
     padding: 3px;
     transition: opacity .5s ease-out;
     opacity: 0;
-    box-shadow: 0 0 7px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0.3646vw rgba(0, 0, 0, .3);
 }
 
 #cartNotifText {
     color: var(--light-white);
-    font-size: 15px;
+    font-size: 0.8vw;
     position: absolute;
     bottom: 3px;
 }
@@ -140,7 +140,8 @@ nav {
     right: 0;
     border: none;
     background-color: var(--light-white);
-    width: 15px;
+    width: .8vw;
+    font-size: .7vw;
     cursor: pointer;
 }
 

@@ -5,7 +5,7 @@ footer {
     color: var(--light-white);
     background-color: var(--dark-green);
     height: 15.65vw;
-    box-shadow: 0 -1px 7px rgba(0, 0, 0, .4);
+    box-shadow: 0 -0.1042vw 0.3646vw rgba(0, 0, 0, .4);
     font-size: 0.8vw;
     overflow: hidden;
 }
