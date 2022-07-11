@@ -67,7 +67,7 @@ class Etusivu extends React.Component {
                         <p id="info-text">
                             Terästassu on suunniteltu erityisesti valesokkelin puurunkorakenteiden korjauksiin. <br />
                             Tuotteillamme on korjattu jo yli <strong>tuhat</strong> kohdetta, niin omakoti- kuin rivitalokiinteistöjä. <br />
-                            Meiltä NOPEAT ja LUOTETTAVAT toimitukset <strong>rahtivapaasti</strong> 1-4 arkipäivässä koko Suomeen. <br />
+                            Meiltä nopeat ja luotettavat toimitukset <strong>rahtivapaasti</strong> 1-4 arkipäivässä koko Suomeen. <br />
                             Asennuksen helppous ja varmuus, sekä valikoiman monipuolisuus ovat olleet Terästassumalliston suunnittelun lähtökohtana. 
                         </p>
                         <p>

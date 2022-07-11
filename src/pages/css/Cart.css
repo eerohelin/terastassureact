@@ -86,8 +86,9 @@
     background-color: var(--dark-green);
     color: var(--light-white);
     display: flex;
-    height: 50px;
-    width: 95%;
+    height: 2.62vw;
+    width: 75.31vw;
+    /* 1446 */
     margin-top: 10px;
     display: flex;
     align-items: center;

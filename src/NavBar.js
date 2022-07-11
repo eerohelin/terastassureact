@@ -79,10 +79,10 @@ class NavBar extends React.Component {
                         <ul id="nav-bar-list">
                             <li className="nav-bar-list-item"><Link to="/" className="link">Etusivu</Link></li>
                             <li className="nav-bar-list-item"><Link to="/verkkokauppa" className="link">Verkkokauppa</Link></li>
-                            <li className="nav-bar-list-item"><Link to="/valesokkelista" className="link">Valesokkelista Yleisesti</Link></li>
+                            <li className="nav-bar-list-item"><Link to="/valesokkelista" className="link">Valesokkelista yleisesti</Link></li>
                             <li className="nav-bar-list-item"><Link to="/suunnittelijoille" className="link">Suunnittelijoille</Link></li>
                             <li className="nav-bar-list-item"><Link to="/asennusohjeet" className="link">Asennusohjeet</Link></li>
-                            <li className="nav-bar-list-item"><Link to="/terastassunedut" className="link">Terästassun Edut</Link></li>
+                            <li className="nav-bar-list-item"><Link to="/terastassunedut" className="link">Terästassun edut</Link></li>
                             <li className="nav-bar-list-item"><Link to="/yhteydenotto" className="link">Yhteydenotto</Link></li>                            
                         </ul>
                     </div>

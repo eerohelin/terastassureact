@@ -47,6 +47,7 @@ function UpdateTotalPrice() {
     var noAlv = (Math.round(((newSum - alvCalc) + Number.EPSILON) * 100) / 100).toFixed(2)
     totalPriceAlv.innerHTML = "<strong>Tuotteet Yhteensä: " + newSum + "€  </strong>(Sis. Alv)"
     totalPriceNoAlv.innerHTML = "Tuotteet Yhteensä: " + noAlv + "€ (Alv. 0)"
+    console.log(React.version)
 }
 
 function CreateItems() {
@@ -80,7 +81,7 @@ function ItemCreator(props) {
     return(
         <div className="shopcart-item-wrapper" id={props.item + "1"}>
             <div className="shopcart-item-title-container">
-                <div className="shopcart-item-title">{title}</div>
+                <div className="shopcart-item-title"><strong>{title}</strong></div>
             </div>
             <div id="shopcart-item-price-container">
                 <div className="shopcart-item-price" id={props.item + "price"}>{price}</div>
